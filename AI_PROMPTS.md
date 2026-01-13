@@ -18,15 +18,38 @@
 
 #### • creating new web services on render. what start command it uses? the same one - npm run dev ?
 
-#### •
+#### • how to check or table exist in db (render)?
 
-#### •
+#### • I am using ts, show example in ts
 
-#### •
+#### • changed js files to ts. error on tunning BE server: Cannot find module 'D:\NodeJS\assignment-eneba\backend\src\index.js'. read there are also ts types for express and cors. Do I need to install them?
 
-#### •
+#### • added this to BE folder/tsconfig.json:
 
-#### •
+{
+"compilerOptions": {
+"target": "ES2020",
+"module": "NodeNext",
+"moduleResolution": "NodeNext",
+"outDir": "dist",
+"rootDir": "src",
+"strict": true,
+"esModuleInterop": true,
+"skipLibCheck": true
+}
+}
+
+and in all folders there is a ts error:
+all are the same about extension at the imports
+Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Did you mean './db/initDB.js'?
+
+#### • is it better to seed games list on initDb function call? or on every server run?
+
+#### • when seeding I meant to check or games list exist. If not seed games list to table.
+
+#### • I don't like your idea to check every row. I think it would be better to check or table isn't empty. InitDb check or table exist. it creates the table if not. then call seed function to check or games table is not empty. if empty then seed table with the games list
+
+#### • How to seed games only once (skip if table already has rows)?
 
 #### •
 

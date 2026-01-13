@@ -10,8 +10,8 @@ app.use(
   })
 );
 
-app.use("/list", listRoutes);
-
 app.use(express.json());
+
+app.use("/list", listRoutes);
 
 export default app;

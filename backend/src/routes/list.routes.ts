@@ -5,7 +5,7 @@ const router = express.Router();
 
 router.get("/", async (req, res) => {
   const result = await pool.query("SELECT NOW()");
-  res.json(result.rows[0]);
+  res.json({ now: result.rows[0].now });
 });
 
 export default router;
