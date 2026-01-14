@@ -51,6 +51,19 @@ Relative import paths need explicit file extensions in ECMAScript imports when '
 
 #### • How to seed games only once (skip if table already has rows)?
 
-#### •
+#### • in render.com where BE is deployed. I have
+
+error while deploaying:
+Error: Cannot find module '/opt/render/project/src/backend/dist/index.js'
+
+#### • express GET method. Get all rows from games table
+
+#### • how to add ts to check type in express?
+
+#### • Postgres returns number, integers as string,?
+
+#### • integer (small) and numeric. Both returns as string?
+
+#### • Then I should to convertor to a number. In frontend it will be used as number. When it is better to convert them into number? while fetching? Or on posting to db?
 
 #### •

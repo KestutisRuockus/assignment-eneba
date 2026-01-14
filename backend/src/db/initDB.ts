@@ -1,17 +1,7 @@
+import { Game } from "../types.js";
 import { pool } from "./db.js";
 
-type GameSeed = {
-  title: string;
-  platform: string;
-  store: string;
-  region: string;
-  price: number;
-  discountPercent: number;
-  cashback?: number;
-  likes: number;
-};
-
-const seedGames: GameSeed[] = [
+const seedGames: Game[] = [
   {
     title: "FIFA 23",
     platform: "Xbox Series X|S",
