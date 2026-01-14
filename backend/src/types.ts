@@ -7,6 +7,7 @@ export type Game = {
   discountPercent: number;
   cashback?: number;
   likes: number;
+  imageUrl: string;
 };
 
 export type GameRowFromDb = {
@@ -19,4 +20,5 @@ export type GameRowFromDb = {
   discount_percent: number;
   cashback: string;
   likes: number;
+  image_url: string;
 };

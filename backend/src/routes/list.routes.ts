@@ -18,6 +18,7 @@ router.get("/", async (req, res) => {
       discountPercent: row.discount_percent,
       cashback: Number(row.cashback),
       likes: row.likes,
+      imageUrl: row.image_url,
     }));
 
     res.status(200).json(games);

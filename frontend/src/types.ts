@@ -7,4 +7,5 @@ export type Game = {
   discountPercent: number;
   cashback?: number;
   likes: number;
+  imageUrl: string;
 };
