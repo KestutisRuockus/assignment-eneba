@@ -66,4 +66,13 @@ Error: Cannot find module '/opt/render/project/src/backend/dist/index.js'
 
 #### • Then I should to convertor to a number. In frontend it will be used as number. When it is better to convert them into number? while fetching? Or on posting to db?
 
+#### • Failed to start server: AggregateError [ECONNREFUSED]
+
+connect ECONNREFUSED ::1:5432
+connect ECONNREFUSED 127.0.0.1:5432
+
+#### • locally works fine. Crashed on deploying
+
+#### • is it a good practice to share types between frontend and backend folders? or it must have them separated?
+
 #### •

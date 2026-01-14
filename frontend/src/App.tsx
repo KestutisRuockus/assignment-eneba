@@ -1,16 +1,24 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import { getAllGames } from "./api/games";
+import type { Game } from "./types";
+import GameCard from "./components/GameCard";
 
 function App() {
+  const [games, setGames] = useState<Game[] | []>([]);
   useEffect(() => {
-    fetch("http://localhost:3000/list")
-      .then((res) => res.json())
-      .then((data) => console.log("Response from backend:", data))
-      .catch((err) => console.log("Error:", err));
+    const fetchGames = async () => {
+      const list = await getAllGames();
+      setGames(list);
+    };
+
+    fetchGames();
   }, []);
+
   return (
     <>
-      <div>Hello, Eneba</div>
-      <div>Check console!</div>
+      {games.map((game: Game) => (
+        <GameCard key={game.title} game={game} />
+      ))}
     </>
   );
 }
