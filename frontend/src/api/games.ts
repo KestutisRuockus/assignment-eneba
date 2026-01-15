@@ -1,6 +1,13 @@
-export const getAllGames = async () => {
+export const getGames = async (search?: string) => {
   try {
-    const response = await fetch(`${import.meta.env.VITE_API_URL}/list`);
+    const baseUrl = `${import.meta.env.VITE_API_URL}/list`;
+
+    const query = search?.trim();
+    const url = query
+      ? `${baseUrl}?search=${encodeURIComponent(query)}`
+      : baseUrl;
+
+    const response = await fetch(url);
     if (!response.ok) {
       throw new Error(`Response: status: ${response.status}`);
     }

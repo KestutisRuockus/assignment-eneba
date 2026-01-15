@@ -77,4 +77,6 @@ connect ECONNREFUSED 127.0.0.1:5432
 
 #### • how to make div bg blured and transparent?
 
+#### • express search by query, takes query from req.query and call endpoint /list?search={search}
+
 #### •

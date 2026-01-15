@@ -6,8 +6,15 @@ const router = express.Router();
 
 router.get("/", async (req, res) => {
   try {
-    const result = await pool.query<GameRowFromDb>(`
-      SELECT * FROM games`);
+    const search = req.query.search;
+
+    const query = search
+      ? `SELECT * FROM games WHERE title ILIKE $1`
+      : `SELECT * FROM games`;
+
+    const queryValues = search ? [`%${search}%`] : [];
+
+    const result = await pool.query<GameRowFromDb>(query, queryValues);
 
     const games: Game[] = result.rows.map((row) => ({
       title: row.title,

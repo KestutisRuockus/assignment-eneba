@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { getAllGames } from "./api/games";
+import { getGames } from "./api/games";
 import type { Game } from "./types";
 import GameCard from "./components/GameCard";
 import "./App.css";
@@ -9,16 +9,21 @@ function App() {
   const [games, setGames] = useState<Game[] | []>([]);
   useEffect(() => {
     const fetchGames = async () => {
-      const list = await getAllGames();
+      const list = await getGames();
       setGames(list);
     };
 
     fetchGames();
   }, []);
 
+  const handleSearch = async (query: string) => {
+    const list = await getGames(query);
+    setGames(list);
+  };
+
   return (
     <main>
-      <Header />
+      <Header onSearch={handleSearch} />
       <p className="results-count">Results found: {games.length}</p>
       <section>
         {games.map((game: Game) => (
