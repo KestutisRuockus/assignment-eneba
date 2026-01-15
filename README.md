@@ -38,7 +38,7 @@ After that, refresh the frontend page — it will fetch data normally.
   - clear button to reset results
 - Backend supports search via query param:
   - `/list` → returns all games
-  - `/list?search=fifa` → filtered results using case-insensitive partial match (`ILIKE '%query%'`)
+  - `/list?search=<gamename>` → filtered results using case-insensitive partial match (`ILIKE '%query%'`)
 
 ---
 
@@ -58,12 +58,13 @@ Returns games filtered by title (case-insensitive partial search).
 
 ```bash
 git clone https://github.com/KestutisRuockus/assignment-eneba.git
+cd assignment-eneba
 ```
 
 #### Backend setup (Express + PostgreSQL)
 
 ```bash
-cd assignment-eneba/backend
+cd backend
 npm install
 ```
 
@@ -85,7 +86,7 @@ npm run dev
 #### Frontend setup (React + Vite)
 
 ```bash
-cd assignment-eneba/frontend
+cd frontend
 npm install
 ```
 
