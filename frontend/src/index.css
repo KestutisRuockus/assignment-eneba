@@ -1,0 +1,12 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  letter-spacing: 1px;
+}
+
+body {
+  background-color: #4618ac;
+  width: 80%;
+  margin: auto;
+}

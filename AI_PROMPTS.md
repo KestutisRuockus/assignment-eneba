@@ -75,4 +75,6 @@ connect ECONNREFUSED 127.0.0.1:5432
 
 #### • is it a good practice to share types between frontend and backend folders? or it must have them separated?
 
+#### • how to make div bg blured and transparent?
+
 #### •
