@@ -176,3 +176,10 @@ article {
   opacity: 0.5;
   font-size: 11px;
 }
+
+.no-games {
+  padding: 40px 0;
+  font-size: 24px;
+  color: #fff;
+  font-style: italic;
+}
